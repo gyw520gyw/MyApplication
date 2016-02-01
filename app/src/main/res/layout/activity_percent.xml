@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <Button
+        android:id="@+id/btn_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Relative"/>
+
+    <Button
+        android:id="@+id/btn_relative2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Relative2"/>
+
+    <Button
+        android:id="@+id/btn_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FrameLayout"/>
+
+    <Button
+        android:id="@+id/btn_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LinearLayout"/>
+
+</LinearLayout>

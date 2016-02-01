@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MyApplication.iml" filepath="$PROJECT_DIR$/MyApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fitchart/fitchart.iml" filepath="$PROJECT_DIR$/fitchart/fitchart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/labview/labview.iml" filepath="$PROJECT_DIR$/labview/labview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library_circular_progress/library_circular_progress.iml" filepath="$PROJECT_DIR$/library_circular_progress/library_circular_progress.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library_me/library_me.iml" filepath="$PROJECT_DIR$/library_me/library_me.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library_network/library_network.iml" filepath="$PROJECT_DIR$/library_network/library_network.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library_nifty/library_nifty.iml" filepath="$PROJECT_DIR$/library_nifty/library_nifty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library_segment_control/library_segment_control.iml" filepath="$PROJECT_DIR$/library_segment_control/library_segment_control.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library_snackbar/library_snackbar.iml" filepath="$PROJECT_DIR$/library_snackbar/library_snackbar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tagview/tagview.iml" filepath="$PROJECT_DIR$/tagview/tagview.iml" />
+    </modules>
+  </component>
+</project>

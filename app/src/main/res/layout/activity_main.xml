@@ -1,0 +1,153 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_databind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DataBind" />
+
+        <Button
+            android:id="@+id/btn_mvp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="mvp架构" />
+
+        <Button
+            android:id="@+id/btn_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Toolbar的测试" />
+
+
+        <Button
+            android:id="@+id/btn_staggeredgrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="StaggeredGrid" />
+
+        <Button
+            android:id="@+id/btn_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RecyclerView" />
+
+        <Button
+            android:id="@+id/btn_retrofit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Retrofit 测试" />
+
+
+        <Button
+            android:id="@+id/btn_okhttp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OkHttp 测试" />
+
+        <Button
+            android:id="@+id/btn_eventbus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EventBus 测试" />
+
+        <Button
+            android:id="@+id/btn_rxjava"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RxJava 测试" />
+
+
+        <Button
+            android:id="@+id/btn_tab_strip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PagerSlidingTabStrip 指针" />
+
+        <Button
+            android:id="@+id/btn_reactive_network"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ReactiveNetwork(网络监听)" />
+
+        <Button
+            android:id="@+id/btn_nifty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nifty(顶部Notification)" />
+
+
+        <Button
+            android:id="@+id/btn_snack_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SnackBar(底部Toast)" />
+
+        <Button
+            android:id="@+id/btn_xutils_db"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="XUtils操作数据库" />
+
+
+        <Button
+            android:id="@+id/btn_segment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="分段选择" />
+
+        <Button
+            android:id="@+id/btn_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="进度条" />
+
+
+        <Button
+            android:id="@+id/btn_tagview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="标签云" />
+
+        <Button
+            android:id="@+id/btn_percent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="百分比布局" />
+
+        <Button
+            android:id="@+id/btn_fitchart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FitChart(google健康)" />
+
+        <Button
+            android:id="@+id/btn_labview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="斜标签" />
+
+        <Button
+            android:id="@+id/btn_tabhost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TabHost" />
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

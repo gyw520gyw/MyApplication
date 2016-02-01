@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--fitchart-->
+    <color name="chart_value_1">#ff0000</color>
+    <color name="chart_value_2">#ff00ff</color>
+    <color name="chart_value_3">#00ff00</color>
+    <color name="chart_value_4">#00ffff</color>
+    <color name="chart_value_5">#88000000</color>
+
+
+    <!--progress-->
+    <color name="simple_bg">#ff39065a</color>
+    <color name="white">#ffffff</color>
+    <color name="pager_bg">#212121</color>
+    <color name="material_pink">#FF4081</color>
+    <color name="pager_base_color">#4cffffff</color>
+    <color name="size_bg">#ffdcd5d6</color>
+    <color name="size_external">#ffff001e</color>
+    <color name="size_base">#ff959595</color>
+    <color name="size_external_circle">#a3ff3443</color>
+
+
+    <!--snackbar-->
+    <color name="yellow">#E2F640</color>
+    <color name="orange">#FBC641</color>
+
+    <!--pagerSlidingTagStrip-->
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="background_window">#FFE5E5E5</color>
+
+</resources>

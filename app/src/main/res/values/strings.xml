@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">Tezt</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!--标签云-->
+    <string name="title_activity_tag_view">TagViewActivity</string>
+
+    <!--百分比-->
+    <string name="title_activity_percent_relative">PercentRelativeActivity</string>
+    <string name="title_activity_percent_relative_activity2">PercentRelativeActivity2</string>
+    <string name="title_activity_percent_fragment">PercentFragmentActivity</string>
+    <string name="title_activity_percent_linear_layout">PercentLinearLayoutActivity</string>
+
+
+    <!--fitchart-->
+    <string name="title_activity_fit_chart">FitChartActivity</string>
+    <string name="title_activity_lab_view">LabViewActivity</string>
+    <string name="title_activity_tab_host">TabHostActivity</string>
+    <string name="title_activity_progress">ProgressActivity</string>
+    <string name="title_activity_simple_progress">SimpleProgressActivity</string>
+
+
+    <!--progress-->
+    <string name="restart">restart</string>
+    <string name="stars">Stars</string>
+    <string name="speed">Speed</string>
+    <string name="stromg">Strength</string>
+    <string name="title_activity_size_progress">SizeProgressActivity</string>
+    <string name="title_activity_segmetn">SegmetnActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_xutils">XutilsActivity</string>
+    <string name="title_activity_snack_bar">SnackBarActivity</string>
+
+    <!--snackBar-->
+    <string name="menu_about">About</string>
+    <string name="syrup_added">Syrup added to the %s</string>
+    <string name="crisis_averted">Crisis averted. That could have turned into a sticky situation.</string>
+    <string name="undo">Undo</string>
+
+    <string-array name="snack_names">
+        <item>Pancakes</item>
+        <item>Marzipan</item>
+        <item>Churros</item>
+        <item>Pastry</item>
+        <item>Scones</item>
+        <item>Waffles</item>
+        <item>Cookie</item>
+        <item>Doughnut</item>
+        <item>Ice cream</item>
+    </string-array>
+
+    <string name="long_message">This message is a lot longer, it should stretch at least two lines and is from
+        the resources.</string>
+    <string name="short_message">This is a one-line message and is from the resources.</string>
+    <string name="action">Action</string>
+    <string name="title_activity_nifty">NiftyActivity</string>
+    <string name="title_activity_reactive_network">ReactiveNetworkActivity</string>
+
+    <!--NetWork-->
+    <string name="waiting_for_connectivity_status">Waiting for connectivity status&#8230;</string>
+    <string name="wifi_signal_strength_changed">Wifi signal strength changed</string>
+    <string name="connectivity_status">Connectivity status:</string>
+    <string name="available_access_points">Available Access Points:</string>
+    <string name="waiting_for_signal_strength_change">Waiting for signal strength change&#8230;</string>
+    <string name="title_activity_tab_strip">TabStripActivity</string>
+
+    <!--tabstrip-->
+    <string name="action_contact">Contact</string>
+    <string name="title_activity_staggered_grid_view">StaggeredGridViewActivity</string>
+</resources>

@@ -1,0 +1,38 @@
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="demo.gyw.com.myapplication.ui.percent.PercentRelativeActivity2">
+
+    <TextView
+        android:id="@+id/tv_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#ff0000"
+        android:gravity="center"
+        android:text="height:33% width:match_parent"
+        app:layout_heightPercent="33%" />
+
+    <TextView
+        android:id="@+id/tv_mid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/tv_top"
+        android:background="#00ff00"
+        android:gravity="center"
+        android:text="height:33% width:match_parent"
+        app:layout_heightPercent="33%" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/tv_mid"
+        android:background="#00ffff"
+        android:gravity="center"
+        android:text="height:34% width:40% margin_left:60%"
+        app:layout_heightPercent="34%"
+        app:layout_widthPercent="40%"
+        app:layout_marginLeftPercent="60%"/>
+
+</android.support.percent.PercentRelativeLayout>

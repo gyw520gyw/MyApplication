@@ -1,0 +1,35 @@
+<android.support.percent.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="demo.gyw.com.myapplication.ui.percent.PercentFragmentActivity">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:background="#ff0000"
+        app:layout_heightPercent="80%"
+        app:layout_widthPercent="80%" />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#00ff00"
+        app:layout_heightPercent="40%"
+        app:layout_widthPercent="40%" />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom|right"
+        android:background="#00ffff"
+        app:layout_heightPercent="20%"
+        app:layout_widthPercent="20%" />
+
+
+</android.support.percent.PercentFrameLayout>

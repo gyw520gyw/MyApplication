@@ -91,7 +91,8 @@
         <activity android:name=".MvpActivity" />
         <activity android:name=".mvp.activity.LoginActivity" />
         <activity android:name=".mvp.activity.OperateActivity" />
-        <activity android:name=".DataBindActivity"></activity>
+        <activity android:name=".DataBindActivity" />
+        <activity android:name=".ShaderTestActivity"></activity>
     </application>
 
 </manifest>

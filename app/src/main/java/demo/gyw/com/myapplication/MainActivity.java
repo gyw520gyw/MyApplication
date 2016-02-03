@@ -26,6 +26,14 @@ public class MainActivity extends ActionBarActivity {
         ExitAppUtil.getInstance().addActivity(this);
     }
 
+    /*btn_shader*/
+    @OnClick(R.id.btn_shader)
+    void openShaderTestActivity() {
+        startActivity(ShaderTestActivity.class);
+    }
+
+
+
     /*btn_databind*/
     @OnClick(R.id.btn_databind)
     void openDataBindActivity() {

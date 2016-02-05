@@ -3,19 +3,20 @@
 
 因为以前写的现在有点想不起来了, 觉得应用记录一下:
 
-2016.01.26
+这是一个demo合集，都是平时看到github的项目觉得不错的就添加进来了！
 
+2016.01.26
 学习MVP模式; 
 
 2016.01.28
-
-完成MVP实例代码，了解MVP
+完成MVP实例代码，学习MVP模式;
+改MVP使用的是Activity/Fragment作为View，独立的Presenter模块！
+后续会继续学Activity/Fragment作为Presenter的方式;
 
 2016.02.01
-
-添加DataBind测试代码
+添加DataBind测试代码;
 
 
 2016.02.02
-
-添加Shader测试代码
+添加Shader测试代码;
+SweepGradient的渐变只能是一个圆，不能根据显示区域来渐变！

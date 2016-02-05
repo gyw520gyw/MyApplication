@@ -9,6 +9,7 @@ public class MainFractory {
 
     protected static final Object lock = new Object();
 
+    //测试
     public static final String Host = "http://hsapi.livedevice.cn/";//http://hsapi.livedevice.cn/healthstore/index.php?m=App&a=appinfo
 
     public static TeztApi getInstance() {

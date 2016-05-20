@@ -6,10 +6,10 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
 
-    <!--友盟需要的权限-->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <!-- 友盟需要的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -97,12 +97,17 @@
         <activity android:name=".mvp.activity.LoginActivity" />
         <activity android:name=".mvp.activity.OperateActivity" />
         <activity android:name=".DataBindActivity" />
-        <activity android:name=".ShaderTestActivity"></activity>
+        <activity android:name=".ShaderTestActivity" />
 
+        <!-- 友盟统计需要 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="56caaac267e58eabc1002e5f" />
+        <meta-data
+            android:name="${UMENG_CHANNEL_VALUE}"
+            android:value="Channel ID" />
 
-        <!--友盟统计需要-->
-        <meta-data android:value="56caaac267e58eabc1002e5f" android:name="UMENG_APPKEY"></meta-data>
-        <meta-data android:value="Channel ID" android:name="${UMENG_CHANNEL_VALUE}"/>
+        <activity android:name=".GreenDaoActivity"></activity>
     </application>
 
 </manifest>

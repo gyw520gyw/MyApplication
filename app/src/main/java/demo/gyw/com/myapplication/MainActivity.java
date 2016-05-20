@@ -3,6 +3,7 @@ package demo.gyw.com.myapplication;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -15,7 +16,7 @@ import demo.gyw.com.myapplication.utils.ExitAppUtil;
 import demo.gyw.com.myapplication.weiget.LabViewActivity;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,13 @@ public class MainActivity extends ActionBarActivity {
         ButterKnife.inject(this);
 
         ExitAppUtil.getInstance().addActivity(this);
+    }
+
+
+    /*btn_greendao*/
+    @OnClick(R.id.btn_greendao)
+    void openGreenDaoActivity() {
+        startActivity(GreenDaoActivity.class);
     }
 
     /*btn_shader*/
@@ -48,10 +56,10 @@ public class MainActivity extends ActionBarActivity {
 
 
     /*btn_toolbar*/
-    @OnClick(R.id.btn_toolbar)
-    void openToolbarActivity() {
-        startActivity(ToolbarActivity.class);
-    }
+//    @OnClick(R.id.btn_toolbar)
+//    void openToolbarActivity() {
+//        startActivity(ToolbarActivity.class);
+//    }
 
    /* btn_staggeredgrid*/
    @OnClick(R.id.btn_staggeredgrid)

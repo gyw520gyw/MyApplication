@@ -14,6 +14,12 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/btn_greendao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Greendao_Test" />
+
+        <Button
             android:id="@+id/btn_shader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,11 +37,11 @@
             android:layout_height="wrap_content"
             android:text="mvp架构" />
 
-        <Button
+       <!-- <Button
             android:id="@+id/btn_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Toolbar的测试" />
+            android:text="Toolbar的测试" />-->
 
 
         <Button

@@ -19,21 +19,22 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'com.jakewharton:butterknife:5.1.1'
     compile 'com.android.support:percent:22.2.0'
-    compile 'com.jiechic.library:xUtils:2.6.14'
-    compile 'de.greenrobot:eventbus:2.4.0'
     compile 'com.android.support:recyclerview-v7:22.2.0'
     compile 'com.android.support:design:22.2.0'
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.jiechic.library:xUtils:2.6.14'
+    compile 'de.greenrobot:eventbus:2.4.0'
     compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
     compile 'com.squareup.okhttp:okhttp:2.5.0'
     compile 'com.google.code.gson:gson:2.5'
     compile 'com.squareup.retrofit:retrofit-converters:2.0.0-beta2'
     compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
     compile 'com.squareup.retrofit:adapter-rxjava:2.0.0-beta2'
-
     compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'de.greenrobot:greendao:2.1.0'
+    compile 'de.greenrobot:greendao-generator:2.1.0'
 }

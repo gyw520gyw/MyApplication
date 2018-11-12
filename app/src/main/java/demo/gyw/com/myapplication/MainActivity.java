@@ -29,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     /*btn_greendao*/
+    @OnClick(R.id.btn_room)
+    void openRoomActivity() {
+        startActivity(RoomActivity.class);
+    }
+
+
+
+    /*btn_greendao*/
     @OnClick(R.id.btn_greendao)
     void openGreenDaoActivity() {
         startActivity(GreenDaoActivity.class);

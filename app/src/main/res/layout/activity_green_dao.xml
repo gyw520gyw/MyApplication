@@ -28,4 +28,12 @@
         android:layout_height="wrap_content"
         android:text="查询"/>
 
+    <LinearLayout
+        android:id="@+id/ll_greendao_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
 </LinearLayout>

@@ -107,7 +107,8 @@
             android:name="${UMENG_CHANNEL_VALUE}"
             android:value="Channel ID" />
 
-        <activity android:name=".GreenDaoActivity"></activity>
+        <activity android:name=".GreenDaoActivity" />
+        <activity android:name=".RoomActivity"></activity>
     </application>
 
 </manifest>

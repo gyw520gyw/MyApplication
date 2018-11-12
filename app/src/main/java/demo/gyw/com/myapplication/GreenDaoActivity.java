@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
@@ -17,6 +19,10 @@ import demo.gyw.com.myapplication.greendao.PersonPresenter;
 public class GreenDaoActivity extends AppCompatActivity {
 
     private PersonPresenter p;
+
+
+    @InjectView(R.id.ll_greendao_container)
+    LinearLayout mContainerLl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +56,10 @@ public class GreenDaoActivity extends AppCompatActivity {
                 List<Person> personList =  p.loadAll();
                 for(Person p : personList) {
                     Log.d("gyw", p.toString());
+                    TextView tv = new TextView(this);
+                    tv.setText(person.toString());
+                    tv.setTextColor(getColor(R.color.default_back_color));
+                    mContainerLl.addView(tv);
                 }
 
                 Toast.makeText(this, "查询" + personList, Toast.LENGTH_SHORT).show();

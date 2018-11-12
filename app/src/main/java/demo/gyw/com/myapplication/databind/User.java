@@ -1,6 +1,6 @@
 package demo.gyw.com.myapplication.databind;
 
-import android.databinding.Bindable;
+//import android.databinding.Bindable;
 
 /**
  * Created by Administrator on 2016/2/1.

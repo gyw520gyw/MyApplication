@@ -21,7 +21,7 @@
         tools:context="demo.gyw.com.myapplication.DataBindActivity">
 
 
-        <TextView
+        <!--<TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="first name"
@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="second name"
-            android:text="@{user.secondName}" />
+            android:text="@{user.secondName}" />-->
 
 
     </LinearLayout>

@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.inject(this);
 
         ExitAppUtil.getInstance().addActivity(this);
+
     }
 
 

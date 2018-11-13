@@ -53,12 +53,15 @@ public class GreenDaoActivity extends AppCompatActivity {
 
             case R.id.btn_greendao_load:
 
+                mContainerLl.removeAllViews();
+
                 List<Person> personList =  p.loadAll();
-                for(Person p : personList) {
+                for(Person lp : personList) {
                     Log.d("gyw", p.toString());
+
                     TextView tv = new TextView(this);
-                    tv.setText(person.toString());
-                    tv.setTextColor(getColor(R.color.default_back_color));
+                    tv.setText(p.toString());
+                    tv.setTextColor(getResources().getColor(android.R.color.black));
                     mContainerLl.addView(tv);
                 }
 

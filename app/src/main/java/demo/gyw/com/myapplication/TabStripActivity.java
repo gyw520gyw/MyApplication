@@ -80,7 +80,7 @@ public class TabStripActivity extends FragmentActivity {
 
         tabs.setIndicatorColor(newColor);
 
-        // change ActionBar color just if an ActionBar is available
+        // change ActionBar color.xml just if an ActionBar is available
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 
             Drawable colorDrawable = new ColorDrawable(newColor);

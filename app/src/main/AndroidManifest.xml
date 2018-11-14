@@ -104,9 +104,9 @@
             android:name="UMENG_APPKEY"
             android:value="56caaac267e58eabc1002e5f" />
         <meta-data
-            android:name="${UMENG_CHANNEL_VALUE}"
+            android:name="gyw"
             android:value="Channel ID" />
-
+        <!--android:name="${UMENG_CHANNEL_VALUE}"-->
         <activity android:name=".GreenDaoActivity" />
         <activity android:name=".RoomActivity"></activity>
     </application>

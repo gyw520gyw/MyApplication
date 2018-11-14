@@ -2,13 +2,15 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
+
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
     }
     buildTypes {
         release {
@@ -19,26 +21,29 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.jakewharton:butterknife:5.1.1'
-    compile 'com.android.support:percent:25.0.0'
-    compile 'com.android.support:recyclerview-v7:25.0.0'
-    compile 'com.android.support:design:25.0.0'
-    compile 'com.android.support:appcompat-v7:25.0.0'
-    compile 'com.jiechic.library:xUtils:2.6.14'
-    compile 'de.greenrobot:eventbus:2.4.0'
-    compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
-    compile 'com.squareup.okhttp:okhttp:2.5.0'
-    compile 'com.google.code.gson:gson:2.5'
-    compile 'com.squareup.retrofit:retrofit-converters:2.0.0-beta2'
-    compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
-    compile 'com.squareup.retrofit:adapter-rxjava:2.0.0-beta2'
-    compile 'com.umeng.analytics:analytics:latest.integration'
-    compile 'de.greenrobot:greendao:2.1.0'
-    compile 'de.greenrobot:greendao-generator:2.1.0'
-    compile 'com.android.support:support-v4:25.0.0'
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api 'junit:junit:4.12'
+    api 'com.jakewharton:butterknife:5.1.1'
+    api 'com.android.support:percent:25.0.0'
+    api 'com.android.support:recyclerview-v7:25.0.0'
+    api 'com.android.support:design:25.0.0'
+    api 'com.android.support:appcompat-v7:25.0.0'
+    api 'com.jiechic.library:xUtils:2.6.14'
+    api 'de.greenrobot:eventbus:2.4.0'
+    api 'com.squareup.retrofit:retrofit:2.0.0-beta2'
+    api 'com.squareup.okhttp:okhttp:2.5.0'
+    api 'com.google.code.gson:gson:2.5'
+    api 'com.squareup.retrofit:retrofit-converters:2.0.0-beta2'
+    api 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
+    api 'com.squareup.retrofit:adapter-rxjava:2.0.0-beta2'
+    api 'com.umeng.analytics:analytics:latest.integration'
+    api 'de.greenrobot:greendao:2.1.0'
+    api 'de.greenrobot:greendao-generator:2.1.0'
+    api 'com.android.support:support-v4:25.0.0'
 
+    api "android.arch.persistence.room:runtime:1.1.1"
+    api "android.arch.persistence.room:rxjava2:1.1.1"
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
 
 
 

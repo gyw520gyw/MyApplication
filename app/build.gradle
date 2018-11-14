@@ -12,6 +12,7 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
     }
 
 
@@ -23,32 +24,32 @@ android {
     }
 
 
-    productFlavors {
-        gyw {}
-//        baidu {}
-//        "c360" {}
-//        uc {}
-//        xiaomi {}
-
-        productFlavors.all { flavor ->
-            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
-        }
-    }
+//    productFlavors {
+//        gyw {}
+////        baidu {}
+////        "c360" {}
+////        uc {}
+////        xiaomi {}
+//
+//        productFlavors.all { flavor ->
+//            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+//        }
+//    }
 
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    compile project(':fitchart')
-    compile project(':tagview')
-    compile project(':labview')
-    compile project(':library_circular_progress')
-    compile project(':library_segment_control')
-    compile project(':library_snackbar')
-    compile project(':library_nifty')
-    compile project(':library_network')
-    compile project(':library_me')
+    implementation project(':fitchart')
+    implementation project(':tagview')
+    implementation project(':labview')
+    implementation project(':library_circular_progress')
+    implementation project(':library_segment_control')
+    implementation project(':library_snackbar')
+    implementation project(':library_nifty')
+    implementation project(':library_network')
+    implementation project(':library_me')
 
 
 }

@@ -7,7 +7,7 @@ import com.lidroid.xutils.db.annotation.Id;
  */
 
 public class User {
-//    @Id
+    @Id
     private int id;
     private String userName;
     private String email;

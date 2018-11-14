@@ -52,7 +52,7 @@
              android:singleLine="true"
              android:ellipsize="end"
              android:text="Loading ..."
-             android:textColor="@android:color/white" />
+             android:textColor="@android:color.xml/white" />
      </LinearLayout>-->
 
 </LinearLayout>

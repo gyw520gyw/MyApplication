@@ -11,25 +11,36 @@
     android:orientation="vertical"
     tools:context="demo.gyw.com.myapplication.mvp.activity.LoginActivity">
 
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
     <EditText
+        android:id="@+id/et_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="username"/>
 
     <EditText
+        android:id="@+id/et_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="password"
         />
 
     <Button
+        android:id="@+id/btn_login"
         android:text="login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    
+
     <ProgressBar
-        style="@android:style/Widget.Material.ProgressBar"
+        android:id="@+id/progressbar"
+        android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
 
 </LinearLayout>

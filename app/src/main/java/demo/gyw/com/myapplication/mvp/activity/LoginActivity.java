@@ -20,7 +20,7 @@ import demo.gyw.com.myapplication.mvp.presenter.LoginPresenterImpl;
 
 public class LoginActivity extends FragmentActivity implements LoginView {
 
-    @InjectView(R.id.et_username)
+    @InjectView(R.id.et_name)
     EditText mUsernameEt;
 
     @InjectView(R.id.et_password)

@@ -1,8 +1,8 @@
 package demo.gyw.com.myapplication;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -10,7 +10,7 @@ import android.widget.Toast;
 import com.github.mrengineer13.snackbar.SnackBar;
 
 
-public class SnackBarActivity extends ActionBarActivity implements SnackBar.OnMessageClickListener {
+public class SnackBarActivity extends Activity implements SnackBar.OnMessageClickListener {
 
 
     public static final String SAVED_SNACKBAR = "SAVED_SNACKBAR";

@@ -1,5 +1,6 @@
 package demo.gyw.com.myapplication;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,7 +15,7 @@ import demo.gyw.com.myapplication.mvp.activity.LoginActivity;
  *     用户， 登录，
  */
 
-public class MvpActivity extends AppCompatActivity {
+public class MvpActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,5 +1,6 @@
 package demo.gyw.com.myapplication;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -22,7 +23,7 @@ import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
-public class RetrofitActivity extends AppCompatActivity {
+public class RetrofitActivity extends Activity {
 
 
     private static final String TAG = "RetrofitActivity";

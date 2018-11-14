@@ -1,6 +1,6 @@
 package demo.gyw.com.myapplication;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -9,7 +9,7 @@ import android.widget.Toast;
 import com.sevenheaven.segmentcontrol.SegmentControl;
 
 
-public class SegmetnActivity extends ActionBarActivity {
+public class SegmetnActivity extends Activity {
 
     SegmentControl mSegmentControl;
 

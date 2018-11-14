@@ -1,5 +1,6 @@
 package demo.gyw.com.myapplication;
 
+import android.app.Activity;
 import android.net.wifi.ScanResult;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -19,7 +20,7 @@ import rx.functions.Action1;
 import rx.schedulers.Schedulers;
 
 
-public class ReactiveNetworkActivity extends ActionBarActivity {
+public class ReactiveNetworkActivity extends Activity {
 
     private TextView tvConnectivityStatus;
     private ListView lvAccessPoints;

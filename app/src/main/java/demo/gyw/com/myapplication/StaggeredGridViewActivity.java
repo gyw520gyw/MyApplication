@@ -1,13 +1,13 @@
 package demo.gyw.com.myapplication;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import demo.gyw.com.myapplication.weiget.staggeredGridView.StaggeredGridView;
 
-public class StaggeredGridViewActivity extends AppCompatActivity {
+public class StaggeredGridViewActivity extends Activity {
 
     @InjectView(R.id.staggered_grid_view)
     StaggeredGridView mGridView;

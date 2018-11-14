@@ -41,11 +41,11 @@ dependencies {
     api 'de.greenrobot:greendao-generator:2.1.0'
     api 'com.android.support:support-v4:25.0.0'
 
+
+
     api "android.arch.persistence.room:runtime:1.1.1"
-    api "android.arch.persistence.room:rxjava2:1.1.1"
-    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
-
-
+//    implementation "android.arch.persistence.room:rxjava2:1.1.1"
+    api "android.arch.persistence.room:compiler:1.1.1"
 
 //    compile "android.arch.persistence.room:runtime:1.1.1"
 //    annotationProcessor "android.arch.persistence.room:compiler:$room_version"

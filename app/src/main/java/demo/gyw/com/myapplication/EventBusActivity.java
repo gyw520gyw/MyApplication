@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentActivity;
 /**
  * Created by Administrator on 2015/11/4.
  */
-public class EventBusActivity extends FragmentActivity {
+public class EventBusActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,5 +1,6 @@
 package demo.gyw.com.myapplication;
 
+import android.app.Activity;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -14,7 +15,7 @@ import java.util.Collection;
 
 import demo.gyw.com.myapplication.R;
 
-public class FitChartActivity extends ActionBarActivity {
+public class FitChartActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

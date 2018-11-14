@@ -1,5 +1,6 @@
 package demo.gyw.com.myapplication;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,7 +17,7 @@ import butterknife.OnClick;
 import demo.gyw.com.myapplication.db.model.Person;
 import demo.gyw.com.myapplication.greendao.PersonPresenter;
 
-public class GreenDaoActivity extends AppCompatActivity {
+public class GreenDaoActivity extends Activity {
 
     private PersonPresenter p;
 

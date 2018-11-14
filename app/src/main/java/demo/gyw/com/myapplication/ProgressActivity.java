@@ -1,5 +1,6 @@
 package demo.gyw.com.myapplication;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
@@ -13,7 +14,7 @@ import demo.gyw.com.myapplication.ui.progress.SizeProgressActivity;
 import demo.gyw.com.myapplication.utils.ExitAppUtil;
 
 
-public class ProgressActivity extends ActionBarActivity {
+public class ProgressActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

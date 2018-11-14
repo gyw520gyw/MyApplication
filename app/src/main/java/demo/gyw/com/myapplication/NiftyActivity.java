@@ -1,5 +1,6 @@
 package demo.gyw.com.myapplication;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Gravity;
@@ -11,7 +12,7 @@ import com.gitonway.lee.niftynotification.lib.Effects;
 import com.gitonway.lee.niftynotification.lib.NiftyNotificationView;
 
 
-public class NiftyActivity extends ActionBarActivity {
+public class NiftyActivity extends Activity {
 
     private Effects effect;
     private NiftyNotificationView mView;

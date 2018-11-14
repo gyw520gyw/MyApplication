@@ -1,5 +1,6 @@
 package demo.gyw.com.myapplication.mvp.activity;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -22,7 +23,7 @@ import demo.gyw.com.myapplication.mvp.engine.OnItemClickListener;
 import demo.gyw.com.myapplication.mvp.presenter.OperatePresenter;
 import demo.gyw.com.myapplication.mvp.presenter.OperatePresenterImpl;
 
-public class OperateActivity extends AppCompatActivity implements OperateView, OnItemClickListener {
+public class OperateActivity extends Activity implements OperateView, OnItemClickListener {
 
     @InjectView(R.id.rv_operate)
     RecyclerView mRecyclerView;

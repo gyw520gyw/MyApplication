@@ -1,5 +1,6 @@
 package demo.gyw.com.myapplication;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerAdapter;
@@ -23,7 +24,7 @@ import butterknife.InjectView;
 /**
  * Created by Administrator on 2015/11/16.
  */
-public class RecyclerViewActivity extends AppCompatActivity {
+public class RecyclerViewActivity extends Activity {
 
     @InjectView(R.id.id_recycler_view)
     RecyclerView mRecyclerView;

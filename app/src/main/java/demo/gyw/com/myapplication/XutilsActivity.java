@@ -1,5 +1,6 @@
 package demo.gyw.com.myapplication;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 
@@ -15,7 +16,7 @@ import butterknife.OnClick;
 import demo.gyw.com.myapplication.bean.User;
 
 
-public class XutilsActivity extends ActionBarActivity {
+public class XutilsActivity extends Activity {
 
 
     private DbUtils db;

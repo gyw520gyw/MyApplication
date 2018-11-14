@@ -1,9 +1,9 @@
 package demo.gyw.com.myapplication;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 
-public class ShaderTestActivity extends AppCompatActivity {
+public class ShaderTestActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

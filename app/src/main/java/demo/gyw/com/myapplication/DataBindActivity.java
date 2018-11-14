@@ -3,12 +3,13 @@ package demo.gyw.com.myapplication;
 //import android.databinding.DataBindingUtil;
 //import android.databinding.ViewDataBinding;
 //import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 //import demo.gyw.com.myapplication.databind.User;
 
-public class DataBindActivity extends AppCompatActivity {
+public class DataBindActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,5 +1,6 @@
 package demo.gyw.com.myapplication;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -17,7 +18,7 @@ import java.io.IOException;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class OkHttpActivity extends AppCompatActivity {
+public class OkHttpActivity extends Activity {
 
     @InjectView(R.id.tv_ok_http)
     TextView mTv;

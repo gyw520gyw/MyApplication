@@ -2,7 +2,7 @@ package demo.gyw.com.myapplication.mvp.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,7 +18,7 @@ import demo.gyw.com.myapplication.mvp.model.User;
 import demo.gyw.com.myapplication.mvp.presenter.LoginPresenter;
 import demo.gyw.com.myapplication.mvp.presenter.LoginPresenterImpl;
 
-public class LoginActivity extends AppCompatActivity implements LoginView {
+public class LoginActivity extends FragmentActivity implements LoginView {
 
     @InjectView(R.id.et_username)
     EditText mUsernameEt;

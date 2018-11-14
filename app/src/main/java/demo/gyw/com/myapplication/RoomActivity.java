@@ -1,7 +1,7 @@
 package demo.gyw.com.myapplication;
 
+import android.app.Activity;
 import android.arch.persistence.room.Room;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,7 +17,7 @@ import demo.gyw.com.myapplication.room.AppDatabase;
 import demo.gyw.com.myapplication.room.dao.UserDao;
 import demo.gyw.com.myapplication.room.model.User;
 
-public class RoomActivity extends AppCompatActivity {
+public class RoomActivity extends Activity {
 
 
     private UserDao mUserDao;

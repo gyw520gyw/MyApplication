@@ -106,9 +106,10 @@
         <meta-data
             android:name="gyw"
             android:value="Channel ID" />
-        <!--android:name="${UMENG_CHANNEL_VALUE}"-->
+        <!-- android:name="${UMENG_CHANNEL_VALUE}" -->
         <activity android:name=".GreenDaoActivity" />
-        <activity android:name=".RoomActivity"></activity>
+        <activity android:name=".RoomActivity" />
+        <activity android:name=".KotlinxCoroutineActivity"></activity>
     </application>
 
 </manifest>

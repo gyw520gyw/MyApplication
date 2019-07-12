@@ -8,7 +8,8 @@
 这是一个demo合集，都是平时看到github的项目觉得不错的就添加进来了！
 
 
-![效果](./screenshot/shot.png)
+
+[效果](./screenshot/shot.png)
 
 
 ###2018.11.14

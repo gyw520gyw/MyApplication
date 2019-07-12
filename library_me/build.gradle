@@ -21,7 +21,7 @@ android {
 }
 
 dependencies {
-    api fileTree(dir: 'libs', include: ['*.jar'])
+    api fileTree(include: ['*.jar'], dir: 'libs')
     api 'junit:junit:4.12'
     api 'com.jakewharton:butterknife:5.1.1'
     api 'com.android.support:percent:25.0.0'
@@ -40,13 +40,14 @@ dependencies {
     api 'de.greenrobot:greendao:2.1.0'
     api 'de.greenrobot:greendao-generator:2.1.0'
     api 'com.android.support:support-v4:25.0.0'
+    api 'android.arch.persistence.room:runtime:1.1.1'
+    //    implementation "android.arch.persistence.room:rxjava2:1.1.1"
+    api 'android.arch.persistence.room:compiler:1.1.1'
+    //    compile "android.arch.persistence.room:runtime:1.1.1"
+    //    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
+    api "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    api "org.jetbrains.anko:anko-common:$anko_version"
 
-
-
-    api "android.arch.persistence.room:runtime:1.1.1"
-//    implementation "android.arch.persistence.room:rxjava2:1.1.1"
-    api "android.arch.persistence.room:compiler:1.1.1"
-
-//    compile "android.arch.persistence.room:runtime:1.1.1"
-//    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
+    api 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.1'
+    api 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.2.1'
 }

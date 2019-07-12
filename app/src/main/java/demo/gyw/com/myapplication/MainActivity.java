@@ -30,6 +30,12 @@ public class MainActivity extends Activity {
     }
 
 
+    /*btn_kotlinx*/
+    @OnClick(R.id.btn_kotlinx)
+    void openKotlinxActivity() {
+        startActivity(KotlinxCoroutineActivity.class);
+    }
+
     /*btn_greendao*/
     @OnClick(R.id.btn_room)
     void openRoomActivity() {

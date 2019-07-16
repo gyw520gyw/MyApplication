@@ -30,6 +30,13 @@ public class MainActivity extends Activity {
     }
 
 
+    /*btn_weex*/
+    @OnClick(R.id.btn_weex)
+    void openWeexActivity() {
+        startActivity(CommonWeexActivity.class);
+    }
+
+
     /*btn_kotlinx*/
     @OnClick(R.id.btn_kotlinx)
     void openKotlinxActivity() {

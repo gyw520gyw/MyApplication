@@ -25,4 +25,12 @@
         <attr name="itemMargin" format="dimension" />
     </declare-styleable>
 
+    <declare-styleable name="FlipboardView">
+        <attr name="iconId" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="WeatherView">
+        <attr name="outRadius" format="dimension"/>
+    </declare-styleable>
+
 </resources>

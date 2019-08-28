@@ -20,7 +20,7 @@ public class MyApplication extends Application {
 
         initWeex();
 
-        initDebugEnvironment(true, " 192.168.1.195");
+//        initDebugEnvironment(true, " 192.168.1.195");
 //        WXSDKEngine.reload();
     }
 

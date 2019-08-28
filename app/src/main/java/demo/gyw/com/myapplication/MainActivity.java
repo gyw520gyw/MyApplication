@@ -30,6 +30,13 @@ public class MainActivity extends Activity {
     }
 
 
+    /*btn_hencode*/
+    @OnClick(R.id.btn_hencode)
+    void openHencodeActivity() {
+        startActivity(HencodeActivity.class);
+    }
+
+
     /*btn_weex*/
     @OnClick(R.id.btn_weex)
     void openWeexActivity() {

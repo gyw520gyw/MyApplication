@@ -33,6 +33,7 @@ class CommonWeexActivity : AppCompatActivity(), IWXRenderListener {
          */
         var pageName = "WXSample"
         var bundleUrl = "http://dotwe.org/raw/dist/38e202c16bdfefbdb88a8754f975454c.bundle.wx"
+//        var bundleUrl = "http://192.168.3.248/HLOHbgj/HLOneAPI-Weex/raw/master/TestDemo/dist/hloneapi-test.weex.js?showtype=weex"
         mWXSDKInstance.renderByUrl(pageName, bundleUrl, null, null, WXRenderStrategy.APPEND_ASYNC)
 
 

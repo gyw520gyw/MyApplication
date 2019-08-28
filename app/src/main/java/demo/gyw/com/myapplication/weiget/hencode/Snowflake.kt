@@ -71,7 +71,7 @@ class Snowflake {
 
 
     private fun getRadius(): Float {
-        return (random.nextInt(15) + 3).toFloat()
+        return (random.nextInt(6) + 3).toFloat()
     }
 
 

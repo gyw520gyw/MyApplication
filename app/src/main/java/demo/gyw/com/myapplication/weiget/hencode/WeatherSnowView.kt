@@ -124,7 +124,7 @@ class WeatherSnowView @JvmOverloads constructor(
         }
         handler.postDelayed({
             invalidate()
-        }, 10)
+        }, 40)
     }
 
 }

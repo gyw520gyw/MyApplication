@@ -1,12 +1,17 @@
 package demo.gyw.com.myapplication.weiget.hencode
 
+import android.animation.Animator
+import android.animation.ObjectAnimator
+import android.animation.ValueAnimator
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.*
+import android.support.v4.media.session.PlaybackStateCompat
 import android.util.AttributeSet
 import android.view.View
 import demo.gyw.com.myapplication.R
 import demo.gyw.com.myapplication.ext.dp2px
+import demo.gyw.com.myapplication.ext.log
 import demo.gyw.com.myapplication.ext.px2dp
 
 /**
@@ -34,14 +39,25 @@ class WeatherCloudView @JvmOverloads constructor(
 
 
     private var cloudPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        this.color = Color.parseColor("#FF0000")
-        this.style = Paint.Style.STROKE
-        this.strokeWidth = 4f
+        this.color = Color.parseColor("#eceee8")
     }
 
     private var cloudPath = Path()
     private var rectF = RectF()
 
+    private var moveX = 0f
+        get() = field
+        set(value) {
+            field = value
+            invalidate()
+        }
+
+
+    var animitor = ObjectAnimator.ofFloat(this, "moveX", 0f, 1f).apply {
+        this.repeatMode = ValueAnimator.REVERSE
+        this.repeatCount = -1
+        this.duration = 2000
+    }
 
     init {
 
@@ -56,7 +72,7 @@ class WeatherCloudView @JvmOverloads constructor(
 
         innerRadius = innerRadiusDp.dp2px(context)
 
-
+        animitor.start()
 
     }
 
@@ -82,56 +98,55 @@ class WeatherCloudView @JvmOverloads constructor(
 
         innerPaint?.let {
             it.shader = LinearGradient(centerX - innerRadius, centerY + innerRadius , centerX + innerRadius/2, centerX - innerRadius,
-                    Color.parseColor("#53a4e0"), Color.parseColor("#ffffff"), Shader.TileMode.CLAMP)
+                    Color.parseColor("#53a4e0"), Color.parseColor("#c3d9e0"), Shader.TileMode.CLAMP)
         }
         canvas.drawCircle(centerX, centerY, innerRadius, innerPaint)
 
 
-//        drawCloud(centerX, centerY, canvas)
+        var rateX = 20f.dp2px(context) * moveX
+        drawCloud(centerX + innerRadius/2 - rateX , centerY - innerRadius, 16f.dp2px(context), canvas)
 
-        drawCloud2(centerX, centerY, canvas)
-
-//        cloudPath.arcTo(rectF, 270f, 180f)
-//        cloudPath.close()
-
-//        canvas.drawPath(cloudPath, cloudPaint)
-
-    }
-
-    private fun drawCloud(centerX: Float, centerY: Float, canvas: Canvas) {
-        // 画云
-        rectF.set(centerX, centerY - innerRadius, centerX + 20f.dp2px(context),  centerY - innerRadius + 20f.dp2px(context))
-        canvas.drawArc(rectF, 0f, 360f, false, cloudPaint)
-//        cloudPath.addArc(rectF, 90f, 180f)
-        rectF.set(centerX + 10f.dp2px(context), centerY - innerRadius - 20f.dp2px(context), centerX + 40f.dp2px(context),  centerY - innerRadius + 10f.dp2px(context))
-        canvas.drawArc(rectF, 0f, 360f, false, cloudPaint)
-//        cloudPath.arcTo(rectF, 150f, 200f)
-        rectF.set(centerX + 20f.dp2px(context), centerY - innerRadius - 10f.dp2px(context), centerX + 50f.dp2px(context),  centerY - innerRadius + 20f.dp2px(context))
-        canvas.drawArc(rectF, 0f, 360f, false, cloudPaint)
-//        cloudPath.arcTo(rectF, 270f, 90f)
-        rectF.set(centerX + 40f.dp2px(context), centerY - innerRadius, centerX + 60f.dp2px(context),  centerY - innerRadius + 20f.dp2px(context))
-        canvas.drawArc(rectF, 0f, 360f, false, cloudPaint)
+        rateX = 10f.dp2px(context) * moveX
+        drawCloud(centerX - rateX , centerY - innerRadius + 16f.dp2px(context), 16f.dp2px(context), canvas)
 
     }
 
 
-    private fun drawCloud2(centerX: Float, centerY: Float, canvas: Canvas) {
-        // 画云
-        rectF.set(centerX, centerY - innerRadius, centerX + 10f.dp2px(context),  centerY - innerRadius + 10f.dp2px(context))
-//        canvas.drawArc(rectF, 0f, 360f, false, cloudPaint)
+
+    //画云 四个圆一个长方形  可控制大小
+    private fun drawCloud(centerX: Float, centerY: Float, baseRadius: Float, canvas: Canvas) {
+
+        rectF.set(centerX, centerY, centerX + baseRadius,  centerY + baseRadius)
+        canvas.drawArc(rectF, 0f, 360f, false, cloudPaint)
+        rectF.set(centerX + baseRadius/2, centerY + baseRadius/2 - baseRadius*3/2, centerX + baseRadius/2 + baseRadius*3/2,  centerY + baseRadius/2)
+        canvas.drawArc(rectF, 0f, 360f, false, cloudPaint)
+        rectF.set(centerX + baseRadius*3/2 , centerY - baseRadius/2, centerX + baseRadius + baseRadius*3/2,  centerY + baseRadius/2)
+        canvas.drawArc(rectF, 0f, 360f, false, cloudPaint)
+        rectF.set(centerX + baseRadius*2, centerY, centerX + baseRadius*3,  centerY + baseRadius)
+        canvas.drawArc(rectF, 0f, 360f, false, cloudPaint)
+        rectF.set(centerX + baseRadius/2, centerY + baseRadius/3, centerX + baseRadius*5/2, centerY + baseRadius)
+        canvas.drawRect(rectF, cloudPaint)
+
+    }
+
+
+
+    // 可控制大小 // 使用path 发现动画 有问题
+    private fun drawCloud2(centerX: Float, centerY: Float, baseRadius: Float, canvas: Canvas) {
+        canvas.save()
+        rectF.set(centerX, centerY, centerX + baseRadius,  centerY + baseRadius)
         cloudPath.addArc(rectF, 90f, 180f)
-        rectF.set(centerX + 5f.dp2px(context), centerY - innerRadius - 15f.dp2px(context), centerX + 25f.dp2px(context),  centerY - innerRadius + 5f.dp2px(context))
-//        canvas.drawArc(rectF, 0f, 360f, false, cloudPaint)
-        cloudPath.arcTo(rectF, 150f, 200f)
-        rectF.set(centerX + 10f.dp2px(context), centerY - innerRadius - 10f.dp2px(context), centerX + 30f.dp2px(context),  centerY - innerRadius + 10f.dp2px(context))
-//        canvas.drawArc(rectF, 0f, 360f, false, cloudPaint)
+        rectF.set(centerX + baseRadius/2, centerY + baseRadius/2 - baseRadius*3/2, centerX + baseRadius/2 + baseRadius*3/2,  centerY + baseRadius/2)
+        cloudPath.arcTo(rectF, 160f, 180f)
+        rectF.set(centerX + baseRadius*3/2 , centerY - baseRadius/2, centerX + baseRadius + baseRadius*3/2,  centerY + baseRadius/2)
         cloudPath.arcTo(rectF, 270f, 90f)
-        rectF.set(centerX + 25f.dp2px(context), centerY - innerRadius, centerX + 35f.dp2px(context),  centerY - innerRadius + 10f.dp2px(context))
-//        canvas.drawArc(rectF, 0f, 360f, false, cloudPaint)
+        rectF.set(centerX + baseRadius*2, centerY, centerX + baseRadius*3,  centerY + baseRadius)
         cloudPath.arcTo(rectF, 270f, 180f)
         cloudPath.close()
 
         canvas.drawPath(cloudPath, cloudPaint)
+
+        canvas.restore()
     }
 
 

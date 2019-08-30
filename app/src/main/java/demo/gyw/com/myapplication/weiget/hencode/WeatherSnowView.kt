@@ -8,9 +8,7 @@ import android.util.AttributeSet
 import android.view.View
 import demo.gyw.com.myapplication.R
 import demo.gyw.com.myapplication.ext.dp2px
-import demo.gyw.com.myapplication.ext.log
 import demo.gyw.com.myapplication.ext.px2dp
-import kotlinx.android.synthetic.main.sample_weather_snow_view.view.*
 
 /**
  * 2019/8/26 17:28
@@ -49,7 +47,7 @@ class WeatherSnowView @JvmOverloads constructor(
         this.color = Color.parseColor("#e6e8db")
     }
 
-    private var snowList = mutableListOf<Snowflake>()
+    private var snowList = mutableListOf<Weather>()
 
 
     init {
@@ -79,8 +77,8 @@ class WeatherSnowView @JvmOverloads constructor(
 
         if(snowList.isEmpty()) {
             for(i in 0..50) {
-                var snowflake = Snowflake().setScope(measuredWidth, measuredHeight).init()
-                snowList.add(snowflake)
+                var snow = Weather().setScope(measuredWidth.toFloat(), measuredHeight.toFloat()).init(Weather.Type.SNOW)
+                snowList.add(snow)
             }
         }
     }

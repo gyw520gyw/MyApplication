@@ -26,8 +26,9 @@ class HencodeActivity : AppCompatActivity() {
     }
 
     private fun initData() {
-        this.pageModels.add(PageModel(R.layout.sample_weather_cloud_view, R.string.title_hencode_6, R.layout.sample_flipboard_view))
-        this.pageModels.add(PageModel(R.layout.sample_weather_snow_view, R.string.title_hencode_5, R.layout.sample_flipboard_view))
+        this.pageModels.add(PageModel(R.layout.sample_weather_rain_view, R.string.title_hencode_7, R.layout.sample_flipboard_view))
+        this.pageModels.add(PageModel(R.layout.sample_weather_cloud_view, R.string.title_hencode_6, R.layout.sample_weather_cloud_view))
+        this.pageModels.add(PageModel(R.layout.sample_weather_snow_view, R.string.title_hencode_5, R.layout.sample_weather_snow_view))
         this.pageModels.add(PageModel(R.layout.sample_flipboard_view, R.string.title_hencode_4, R.layout.sample_flipboard_view))
         this.pageModels.add(PageModel(R.layout.sample_thumbs_up_view, R.string.title_hencode_1, R.layout.sample_thumbs_up_view))
     }

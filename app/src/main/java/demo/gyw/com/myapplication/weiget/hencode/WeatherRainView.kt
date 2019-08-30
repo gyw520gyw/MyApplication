@@ -1,21 +1,26 @@
 package demo.gyw.com.myapplication.weiget.hencode
 
+import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.*
+import android.support.v4.view.animation.PathInterpolatorCompat
 import android.util.AttributeSet
 import android.view.View
+import android.view.animation.*
 import demo.gyw.com.myapplication.R
 import demo.gyw.com.myapplication.ext.dp2px
+import demo.gyw.com.myapplication.ext.log
 import demo.gyw.com.myapplication.ext.px2dp
 
 /**
- * 2019/8/27 11:44
- * gyw 多云
+ * 2019/8/28 17:24
+ * gyw 雨
  */
-class WeatherCloudView @JvmOverloads constructor(
+class WeatherRainView @JvmOverloads constructor(
         context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
 
@@ -39,6 +44,12 @@ class WeatherCloudView @JvmOverloads constructor(
         this.color = Color.parseColor("#eceee8")
     }
 
+    private var lightPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        this.color = Color.parseColor("#ffffff")
+        this.alpha = 100
+    }
+
+
     private var cloudPath = Path()
     private var rectF = RectF()
 
@@ -56,6 +67,23 @@ class WeatherCloudView @JvmOverloads constructor(
         this.duration = 2000
     }
 
+
+    private var lightAnimator = ObjectAnimator.ofFloat(this, "alpha", 1f, 120f, 1f).apply {
+//        this.interpolator = AccelerateInterpolator()
+        //设计一个回弹 达到闪电效果
+        var interpolatorPath = Path()
+        interpolatorPath.lineTo(0.25f, 0.25f)
+        interpolatorPath.lineTo(0.5f, 0.8f)
+        interpolatorPath.lineTo(0.6f, 0.5f)
+        interpolatorPath.lineTo(0.75f, 0.8f)
+        interpolatorPath.lineTo(1f, 1f)
+        this.interpolator = PathInterpolatorCompat.create(interpolatorPath)
+        this.duration = 800
+    }
+
+
+    private var rainList = mutableListOf<Weather>()
+
     init {
 
         var ta = context.obtainStyledAttributes(attrs, R.styleable.WeatherView)
@@ -69,6 +97,16 @@ class WeatherCloudView @JvmOverloads constructor(
 
         innerRadius = innerRadiusDp.dp2px(context)
 
+        cloudAnimator.addListener(object: AnimatorListenerAdapter() {
+
+            override fun onAnimationRepeat(animation: Animator?) {
+                super.onAnimationRepeat(animation)
+                log("RepeatRepeatRepeat  ")
+                // 闪电 每隔两秒一次
+                lightAnimator.start()
+            }
+        })
+
         cloudAnimator.start()
 
     }
@@ -81,6 +119,15 @@ class WeatherCloudView @JvmOverloads constructor(
         centerX = (measuredWidth / 2).toFloat()
         centerY = (measuredHeight / 2).toFloat()
 
+
+        if(rainList.isEmpty()) {
+            for(i in 0..10) {
+                var rain = Weather()
+                        .setScope(centerX - innerRadius, centerX + innerRadius , centerY - innerRadius, centerY + innerRadius)
+                        .init(Weather.Type.RAIN)
+                rainList.add(rain)
+            }
+        }
     }
 
 
@@ -95,16 +142,24 @@ class WeatherCloudView @JvmOverloads constructor(
 
         innerPaint?.let {
             it.shader = LinearGradient(centerX - innerRadius, centerY + innerRadius , centerX + innerRadius, centerX - innerRadius,
-                    Color.parseColor("#1b9ce2"), Color.parseColor("#e0e2e5"), Shader.TileMode.CLAMP)
+                    Color.parseColor("#4b9cc2"), Color.parseColor("#9adbd9"), Shader.TileMode.CLAMP)
         }
         canvas.drawCircle(centerX, centerY, innerRadius, innerPaint)
 
-
         var rateX = 20f.dp2px(context) * moveX
-        drawCloud(centerX + innerRadius/2 - rateX , centerY - innerRadius, 16f.dp2px(context), canvas)
+        drawCloud(centerX - rateX , centerY - innerRadius, 20f.dp2px(context), canvas)
 
-        rateX = 10f.dp2px(context) * moveX
-        drawCloud(centerX - rateX , centerY - innerRadius + 16f.dp2px(context), 16f.dp2px(context), canvas)
+        for (rain in rainList) {
+            rain.draw(canvas)
+        }
+        handler.postDelayed({
+            invalidate()
+        }, 40)
+
+        lightPaint.alpha = alpha.toInt()
+        log("  alpha  $alpha")
+        //闪电效果
+        canvas.drawCircle(centerX, centerY, innerRadius, lightPaint)
 
     }
 
@@ -128,23 +183,11 @@ class WeatherCloudView @JvmOverloads constructor(
 
 
 
-    // 可控制大小 // 使用path 发现动画 有问题
-    private fun drawCloud2(centerX: Float, centerY: Float, baseRadius: Float, canvas: Canvas) {
-        canvas.save()
-        rectF.set(centerX, centerY, centerX + baseRadius,  centerY + baseRadius)
-        cloudPath.addArc(rectF, 90f, 180f)
-        rectF.set(centerX + baseRadius/2, centerY + baseRadius/2 - baseRadius*3/2, centerX + baseRadius/2 + baseRadius*3/2,  centerY + baseRadius/2)
-        cloudPath.arcTo(rectF, 160f, 180f)
-        rectF.set(centerX + baseRadius*3/2 , centerY - baseRadius/2, centerX + baseRadius + baseRadius*3/2,  centerY + baseRadius/2)
-        cloudPath.arcTo(rectF, 270f, 90f)
-        rectF.set(centerX + baseRadius*2, centerY, centerX + baseRadius*3,  centerY + baseRadius)
-        cloudPath.arcTo(rectF, 270f, 180f)
-        cloudPath.close()
-
-        canvas.drawPath(cloudPath, cloudPaint)
-
-        canvas.restore()
+    override fun onDetachedFromWindow() {
+        super.onDetachedFromWindow()
+        cloudAnimator.cancel()
     }
+
 
 
 }

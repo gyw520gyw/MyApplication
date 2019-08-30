@@ -3,14 +3,13 @@ package demo.gyw.com.myapplication.weiget.hencode
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
-import demo.gyw.com.myapplication.ext.log
 import java.util.*
 
 /**
  * 2019/8/26 17:29
  * gyw 雪片类
  */
-class Snowflake {
+class SnowModel {
 
     private var scopeX = 0
     private var scopeY = 0
@@ -34,7 +33,7 @@ class Snowflake {
 
 
     // 雪花的范围
-    fun setScope(width: Int, height: Int): Snowflake {
+    fun setScope(width: Int, height: Int): SnowModel {
         scopeX = width
         scopeY = height
 //log("scopeX $scopeX  scopeY $scopeY")
@@ -42,7 +41,7 @@ class Snowflake {
     }
 
 
-    fun init(): Snowflake {
+    fun init(): SnowModel {
 
         reset()
 

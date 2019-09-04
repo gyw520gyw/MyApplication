@@ -30,6 +30,13 @@ public class MainActivity extends Activity {
     }
 
 
+    /*btn_viewgroup*/
+    @OnClick(R.id.btn_viewgroup)
+    void openCustomGroupActivity() {
+        startActivity(CustomGroupActivity.class);
+    }
+
+
     /*btn_hencode*/
     @OnClick(R.id.btn_hencode)
     void openHencodeActivity() {

@@ -10,7 +10,6 @@ import android.graphics.*
 import android.support.v4.view.animation.PathInterpolatorCompat
 import android.util.AttributeSet
 import android.view.View
-import android.view.animation.*
 import demo.gyw.com.myapplication.R
 import demo.gyw.com.myapplication.ext.dp2px
 import demo.gyw.com.myapplication.ext.log
@@ -50,7 +49,7 @@ class WeatherRainView @JvmOverloads constructor(
     }
 
 
-    private var cloudPath = Path()
+//    private var cloudPath = Path()
     private var rectF = RectF()
 
     private var moveX = 0f
@@ -65,6 +64,7 @@ class WeatherRainView @JvmOverloads constructor(
         this.repeatMode = ValueAnimator.REVERSE
         this.repeatCount = -1
         this.duration = 2000
+
     }
 
 
@@ -157,7 +157,7 @@ class WeatherRainView @JvmOverloads constructor(
         }, 40)
 
         lightPaint.alpha = alpha.toInt()
-        log("  alpha  $alpha")
+//        log("  alpha  $alpha")
         //闪电效果
         canvas.drawCircle(centerX, centerY, innerRadius, lightPaint)
 

@@ -115,7 +115,9 @@
         <activity android:name=".RoomActivity" />
         <activity android:name=".KotlinxCoroutineActivity" />
         <activity android:name=".CommonWeexActivity" />
-        <activity android:name=".HencodeActivity"></activity>
+        <activity android:name=".HencodeActivity" />
+        <activity android:name=".CustomGroupActivity" />
+        <activity android:name=".ScrollerLayoutActivity"></activity>
     </application>
 
 </manifest>

@@ -11,8 +11,27 @@
 
 [效果](./screenshot/shot.png)
 
+### 2019.09.03
+ 自定义ViewGroup <br>
+```
+1. Viewpager 仿写
+```
+ 
+
+
+### 2019.08.30
+ 自定义View练习
+```aidl
+1. 即刻点赞效果
+2. 翻页效果
+3. 天气(雪)效果
+4. 天气(云)
+5. 天气(雨)
+```
+
+
 ###2019.07.12
-测试Weex
+ 测试Weex
 
 
 ###2019.05.14
@@ -20,7 +39,7 @@
 
 
 ###2018.11.14
-测试数据库ROOM
+ 测试数据库ROOM
 ####导入
 ```
     api "android.arch.persistence.room:runtime:1.1.1"
@@ -36,27 +55,27 @@
 
 
 ###2016.01.26
-学习MVP模式; 
+ 学习MVP模式; 
 
 ###2016.01.28
-完成MVP实例代码，学习MVP模式;
-改MVP使用的是Activity/Fragment作为View，独立的Presenter模块！
-后续会继续学Activity/Fragment作为Presenter的方式;
+ 完成MVP实例代码，学习MVP模式;
+ 改MVP使用的是Activity/Fragment作为View，独立的Presenter模块！
+ 后续会继续学Activity/Fragment作为Presenter的方式;
 
 ###2016.02.01
-添加DataBind测试代码;
+ 添加DataBind测试代码;
 
 
 ###2016.02.02
-添加Shader测试代码;
-SweepGradient的渐变只能是一个圆，不能根据显示区域来渐变！
+ 添加Shader测试代码;
+ SweepGradient的渐变只能是一个圆，不能根据显示区域来渐变！
 
 
 ###2016.02.22
-测试多渠道打包;
+ 测试多渠道打包;
 
 
 ###2016.05.20
-测试第三方持久GreenDao
+ 测试第三方持久GreenDao
 
 

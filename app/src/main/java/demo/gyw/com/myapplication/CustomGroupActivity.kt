@@ -18,5 +18,9 @@ class CustomGroupActivity : AppCompatActivity() {
         mScrollerLayout.setOnClickListener {
             startActivity<ScrollerLayoutActivity>()
         }
+
+        mWaterFallLayout.setOnClickListener {
+            startActivity<WaterFallActivity>()
+        }
     }
 }

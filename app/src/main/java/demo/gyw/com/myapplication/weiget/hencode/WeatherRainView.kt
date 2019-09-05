@@ -101,7 +101,7 @@ class WeatherRainView @JvmOverloads constructor(
 
             override fun onAnimationRepeat(animation: Animator?) {
                 super.onAnimationRepeat(animation)
-                log("RepeatRepeatRepeat  ")
+//                log("RepeatRepeatRepeat  ")
                 // 闪电 每隔两秒一次
                 lightAnimator.start()
             }

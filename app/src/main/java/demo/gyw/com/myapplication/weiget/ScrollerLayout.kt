@@ -7,7 +7,6 @@ import android.view.MotionEvent
 import android.view.ViewConfiguration
 import android.view.ViewGroup
 import android.widget.Scroller
-import demo.gyw.com.myapplication.ext.log
 
 /**
  * 2019/9/3 14:30
@@ -22,6 +21,8 @@ class ScrollerLayout @JvmOverloads constructor(
 
     private var leftBroder = 0
     private var rightBorder = 0
+
+    private var downX = 0f
 
     init {
         mTouchSlop = ViewConfigurationCompat.getScaledPagingTouchSlop(ViewConfiguration.get(context))
@@ -47,10 +48,10 @@ class ScrollerLayout @JvmOverloads constructor(
         leftBroder = getChildAt(0).left
         rightBorder = getChildAt(count-1).right
 
-        log(" leftBroder  $leftBroder  rightBorder $rightBorder")
+//        log(" leftBroder  $leftBroder  rightBorder $rightBorder")
     }
 
-    var downX = 0f
+
 
     override fun onInterceptTouchEvent(ev: MotionEvent): Boolean {
         var action = ev.actionMasked
@@ -97,7 +98,7 @@ class ScrollerLayout @JvmOverloads constructor(
             MotionEvent.ACTION_UP -> {
                 var targetIndex = (scrollX + width/2)/width
                 var dx = targetIndex * width - scrollX
-log("scrollX  $scrollX    targetIndex $targetIndex   dx  $dx")
+//log("scrollX  $scrollX    targetIndex $targetIndex   dx  $dx")
                 mScroller.startScroll(scrollX, 0, dx, 0)
                 invalidate()
 

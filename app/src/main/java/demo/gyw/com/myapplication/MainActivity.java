@@ -30,6 +30,9 @@ public class MainActivity extends Activity {
     }
 
 
+
+
+
     /*btn_viewgroup*/
     @OnClick(R.id.btn_viewgroup)
     void openCustomGroupActivity() {

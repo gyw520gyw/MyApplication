@@ -11,6 +11,13 @@
 
 [效果](./screenshot/shot.png)
 
+### 2019.09.04
+ 自定义View <br>
+```
+6. 水波纹效果
+```
+
+
 ### 2019.09.03
  自定义ViewGroup <br>
 ```
@@ -30,52 +37,52 @@
 ```
 
 
-###2019.07.12
+###2019.07.12 <br>
  测试Weex
 
 
-###2019.05.14
+###2019.05.14 <br>
 测试kotlin 协程
 
 
-###2018.11.14
+### 2018.11.14 
  测试数据库ROOM
 ####导入
 ```
     api "android.arch.persistence.room:runtime:1.1.1"
     annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
-
 ```
 
-####简单实现在RoomActivity中 , 有入口
+#### 2018.10.14 
+简单实现在RoomActivity中 
 
 
 
 ***
 
 
-###2016.01.26
+### 2016.01.26
  学习MVP模式; 
 
-###2016.01.28
+### 2016.01.28
  完成MVP实例代码，学习MVP模式;
  改MVP使用的是Activity/Fragment作为View，独立的Presenter模块！
  后续会继续学Activity/Fragment作为Presenter的方式;
 
-###2016.02.01
+### 2016.02.01
  添加DataBind测试代码;
 
 
-###2016.02.02
+### 2016.02.02
  添加Shader测试代码;
  SweepGradient的渐变只能是一个圆，不能根据显示区域来渐变！
 
 
-###2016.02.22
+### 2016.02.22
  测试多渠道打包;
 
 
-###2016.05.20
+### 2016.05.20
  测试第三方持久GreenDao
 
 

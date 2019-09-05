@@ -16,12 +16,16 @@
 ```
 6. 水波纹效果
 ```
+ 自定义ViewGroup <br>
+```
+2. ViewGroup控制时间拦截, 利用listview实现简单瀑布流效果
+```
 
 
 ### 2019.09.03
  自定义ViewGroup <br>
 ```
-1. Viewpager 仿写
+1. Viewpager仿写(Scroller的应用)
 ```
  
 

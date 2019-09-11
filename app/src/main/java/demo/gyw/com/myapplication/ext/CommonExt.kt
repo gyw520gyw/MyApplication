@@ -25,3 +25,4 @@ fun Float.px2dp(context: Context): Float{
     val scale = context.resources.displayMetrics.density
     return this / scale
 }
+

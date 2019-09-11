@@ -3,10 +3,7 @@ package demo.gyw.com.myapplication
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import demo.gyw.com.myapplication.ext.log
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.CoroutineStart
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 import org.jetbrains.anko.toast
 
 class KotlinxCoroutineActivity : AppCompatActivity() {
@@ -15,9 +12,7 @@ class KotlinxCoroutineActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kotlinx_coroutine)
 
-        initData()
-
-
+//        initData()
     }
 
     private fun initData() {

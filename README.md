@@ -11,6 +11,9 @@
 
 [效果](./screenshot/shot.png)
 
+### 2019.09.12
+ 测试kotlin协程 , 使用测试用例(目录在test/java/), 练习kotlin中文官方(kotlincn.net)文档里面的协程部分代码
+
 ### 2019.09.04
  自定义View <br>
 ```

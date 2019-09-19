@@ -10,11 +10,11 @@ class MyTest2 {
 
     @Test
     fun test() {
-//        testCancel()
+        testCancel()
 //        testCancel2()
 //        testCancel3()
 //        testCancel4()
-        testCancel5()
+//        testCancel5()
     }
 
 

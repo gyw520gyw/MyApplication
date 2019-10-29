@@ -56,4 +56,6 @@ dependencies {
     api 'com.taobao.android:weex_inspector:0.18.10'
 
     api 'com.squareup.okhttp:okhttp-ws:2.5.0'
+
+    api 'com.android.support.constraint:constraint-layout:1.1.3'
 }

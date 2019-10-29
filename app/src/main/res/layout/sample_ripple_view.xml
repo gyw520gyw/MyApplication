@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<demo.gyw.com.myapplication.weiget.RippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        android:src="@drawable/contact"/>
+</demo.gyw.com.myapplication.weiget.RippleLayout>

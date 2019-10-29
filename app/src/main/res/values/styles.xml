@@ -2,6 +2,7 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textAllCaps">false</item>
         <!-- Customize your theme here. -->
     </style>
 
@@ -52,4 +53,22 @@
    <!-- <style name="DialogTheme" parent="android:Theme.Dialog">
         <item name="android:windowBackground">@drawable/dialog_background</item>
     </style>-->
+
+
+<!-- shimmerFragmentLayout -->
+    <style name="thin.white" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">sans-serif-thin</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="thin.white.large" parent="thin.white">
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="thin.white.small" parent="thin.white">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="thin.white.small.button" parent="thin.white.small">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
 </resources>

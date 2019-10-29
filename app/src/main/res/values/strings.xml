@@ -71,4 +71,8 @@
     <!--tabstrip-->
     <string name="action_contact">Contact</string>
     <string name="title_activity_staggered_grid_view">StaggeredGridViewActivity</string>
+
+    <!-- ShimmerFragmentLayout -->
+    <string name="mission_statement">Facebook’s mission is to give people the power to build community and bring the world closer together.</string>
+    <string name="presets">Presets</string>
 </resources>

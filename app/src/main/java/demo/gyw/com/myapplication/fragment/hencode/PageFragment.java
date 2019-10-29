@@ -19,9 +19,6 @@ public class PageFragment extends Fragment {
     @LayoutRes
     int practiceLayoutRes;
 
-    ThumbUpView thumbUpView;
-    boolean isAnimated = true;
-
     public static PageFragment newInstance(@LayoutRes int sampleLayoutRes, @LayoutRes int practiceLayoutRes) {
         PageFragment fragment = new PageFragment();
         Bundle args = new Bundle();

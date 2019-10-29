@@ -15,12 +15,26 @@ class CustomGroupActivity : AppCompatActivity() {
     }
 
     private fun initListener() {
+
+        mShimmerLayout2.setOnClickListener {
+            startActivity<ShimmerLayoutActivity2>()
+        }
+
+        mShimmerLayout.setOnClickListener {
+            startActivity<ShimmerLayoutActivity>()
+        }
+
+
         mScrollerLayout.setOnClickListener {
             startActivity<ScrollerLayoutActivity>()
         }
 
         mWaterFallLayout.setOnClickListener {
             startActivity<WaterFallActivity>()
+        }
+
+        mRulerView.setOnClickListener {
+            startActivity<RulerViewActivity>()
         }
     }
 }

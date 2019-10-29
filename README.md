@@ -11,6 +11,23 @@
 
 [效果](./screenshot/shot.png)
 
+
+### 2019.10.18
+ 自定义ViewGroup <br>
+```
+4. Shimmer效果
+5. Facebook Shimmer效果
+```
+
+
+### 2019.10.16
+ 自定义View <br>
+```
+8. 涟漪效果
+9. 自定义尺子
+```
+
+
 ### 2019.09.12
  测试kotlin协程 , 使用测试用例(目录在test/java/), 练习kotlin中文官方(kotlincn.net)文档里面的协程部分代码
 
@@ -19,6 +36,7 @@
 ```
 6. 水波纹效果
 ```
+
  自定义ViewGroup <br>
 ```
 2. ViewGroup控制时间拦截, 利用listview实现简单瀑布流效果

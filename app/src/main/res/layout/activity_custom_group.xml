@@ -6,18 +6,98 @@
     android:layout_height="match_parent"
     tools:context=".CustomGroupActivity">
 
+
+    <Button
+        android:id="@+id/mShimmerLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ShimmerLayout( Facebook 方案)"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/mShimmerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ShimmerLayout(数据加载完成前显示效果)"
+        app:layout_constraintTop_toBottomOf="@+id/mShimmerLayout2" />
+
+
+
     <Button
         android:id="@+id/mScrollerLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ScrollerLayout"/>
+        android:text="ScrollerLayout (Viewpage)"
+        app:layout_constraintTop_toBottomOf="@+id/mShimmerLayout"/>
 
 
     <Button
-        app:layout_constraintTop_toBottomOf="@+id/mScrollerLayout"
+
         android:id="@+id/mWaterFallLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="WaterFallLayout"/>
+        android:text="WaterFallLayout (控制事件瀑布流效果)"
+        app:layout_constraintTop_toBottomOf="@+id/mScrollerLayout" />
+
+
+    <Button
+        android:id="@+id/mRulerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RulerView (尺子)"
+        app:layout_constraintTop_toBottomOf="@+id/mWaterFallLayout" />
+
+
+    <TextView
+        android:id="@+id/cooLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:background="#FF0000"
+        android:padding="4dp"
+        android:text="ConstraintLayout 测试"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mRulerView" />
+
+    <TextView
+        android:id="@+id/cooLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="#FF0000"
+        android:padding="4dp"
+        android:text="测试ConstraintLayout 测试ConstraintLayout 测试ConstraintLayout 测试"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintLeft_toRightOf="@+id/cooLayout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mRulerView" />
+
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#FF0000"
+        android:padding="10dp"
+        android:text="ConstraintLayout 测试 2222222222222222222222222"
+        app:layout_constraintTop_toBottomOf="@+id/cooLayout2"
+        app:layout_constraintWidth_percent="0.5" />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FF0000"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="hello ConstraintLayout\nConstraintLayoutConstraintLayoutConstraint"
+        app:layout_constraintTop_toBottomOf="@+id/tv3"
+        app:layout_constraintDimensionRatio="H, 1:2"
+        />
 
 </android.support.constraint.ConstraintLayout>

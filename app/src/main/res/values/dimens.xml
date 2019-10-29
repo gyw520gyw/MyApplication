@@ -11,4 +11,7 @@
     <!--NetWork-->
     <dimen name="text_view_padding">10dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+    <!-- shimmer -->
+    <dimen name="monogram_width">40dp</dimen>
 </resources>

@@ -10,7 +10,7 @@ class MyTest4 {
 
     @Test
     fun test() {
-//        test1()
+        test1()
 //        test2()
 
 //        test3()
@@ -21,7 +21,7 @@ class MyTest4 {
 
 //        test5()
 
-        test6()
+//        test6()
     }
 
 
@@ -123,6 +123,9 @@ class MyTest4 {
         }
         launch(Dispatchers.Default) { // 将会获取默认调度器
             println("Default               : I'm working in thread ${Thread.currentThread().name}")
+        }
+        launch(Dispatchers.IO) { // 将会获取io调度器
+            println("IO               : I'm working in thread ${Thread.currentThread().name}")
         }
         launch(newSingleThreadContext("MyOwnThread")) { // 将使它获得一个新的线程
             println("newSingleThreadContext: I'm working in thread ${Thread.currentThread().name}")

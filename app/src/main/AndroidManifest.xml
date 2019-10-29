@@ -117,8 +117,11 @@
         <activity android:name=".CommonWeexActivity" />
         <activity android:name=".HencodeActivity" />
         <activity android:name=".CustomGroupActivity" />
-        <activity android:name=".ScrollerLayoutActivity"/>
-        <activity android:name=".WaterFallActivity"/>
+        <activity android:name=".ScrollerLayoutActivity" />
+        <activity android:name=".WaterFallActivity" />
+        <activity android:name=".RulerViewActivity" />
+        <activity android:name=".ShimmerLayoutActivity" />
+        <activity android:name=".ShimmerLayoutActivity2"></activity>
     </application>
 
 </manifest>

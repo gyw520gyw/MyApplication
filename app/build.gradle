@@ -45,6 +45,11 @@ android {
         }
     }
 
+
+    packagingOptions {
+        exclude 'META-INF/proguard/coroutines.pro'
+    }
+
 //    productFlavors {
 //        gyw {}
 ////        baidu {}
@@ -60,6 +65,7 @@ android {
 }
 
 dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -78,7 +84,6 @@ dependencies {
     implementation project(':library_me')
 
 
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
 }
 
 apply plugin: 'kotlin-android'
